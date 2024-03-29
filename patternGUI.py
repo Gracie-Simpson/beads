@@ -48,12 +48,12 @@ row_block_label.grid(row=0, column=2, padx=40, pady=20)
 
 
 def update_colors(item, label):
-    if 'B' in item:
-        label.config(fg= '#786c01')  # Blue text #30b0ff
+    if 'D' in item:
+        label.config(fg= '#30b0ff')  # Blue text
+    elif 'A' in item:
+        label.config(fg= '#ffffff')  # White text
     elif 'C' in item:
-        label.config(fg= '#fff200')  # White text
-    elif 'D' in item:
-        label.config(fg= '#fffa99')  # White text
+        label.config(fg= '#ff0000')  # Red Text
     else:
         label.config(fg='Black')  # black text
 
