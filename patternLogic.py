@@ -40,3 +40,11 @@ def advance_row(matrix, row, past_column, current_column, future_column):
         row = 0
         past_column = current_column = future_column = len(matrix[row])-1
     return row, past_column, current_column, future_column
+
+def jump_to_row(matrix, row, new_row, past_column, current_column, future_column):
+    if (new_row-1 <= len(matrix)):
+        row = new_row - 1
+        past_column = current_column = future_column = len(matrix[row])-1
+    else: 
+        row = row
+    return row, past_column, current_column, future_column

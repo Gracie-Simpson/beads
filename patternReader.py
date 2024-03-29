@@ -49,3 +49,17 @@ def patternReader(inputString):
     
     #return the desired matrix
     return filtered_matrix
+
+
+def trackerReader():
+    tracker = read_input_from_file('tracker.txt')
+    tracker = tracker.split(", ")
+    current_row = tracker[0]
+    max_row = tracker[1]
+    return current_row, max_row
+
+def trackerUpdate(text):
+    #open file in overwrite mode
+    tracker = open('C:/Users/Jgrac/beads/tracker.txt', 'w')
+    tracker.write(text)
+    tracker.close()
